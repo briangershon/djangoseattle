@@ -1,0 +1,146 @@
+/* @override http://127.0.0.1:8000/static/css/DSSite.css */
+
+h2 {
+	color: #002832;
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+#welcome p {
+	font-size: 1.5em;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+h1.content-title {
+    color: #015267;
+	margin-top: 25px;
+	font-size: 2em;
+}
+
+/* Local styles for the DSSite.  These are applied after the 'blueprint' styles. */
+
+#welcome {
+}
+
+body {
+  background-color: #FFF;
+}
+
+div#container {
+  background-color: #FFF;
+}
+
+/* Navigation Bar */
+
+#header ul.navBar {
+  background-color: #eaebfc;
+  list-style-type: none;
+  text-align: left;
+  margin: 0px;
+  padding: 10px 0;
+  letter-spacing: 0.1em;
+  font-size: 1.2em;
+  font-family: Helvetica, Verdana, sans-serif;
+}
+#header li.menuItem {
+  padding: 5px 20px;
+  display: inline;
+  vertical-align: middle;
+}
+#header li.menuItem a {
+  color: #015267;
+  font-weight: bold;
+  text-decoration: none;
+}
+#header li.menuItem a:hover {
+  text-decoration: underline;
+}
+
+/* Twitter Feed */
+
+h2#twitter-header {
+  font-size: 1.5em;
+  margin: 10px 0 -5px 0;
+}
+
+div.tweet {
+  padding: 10px 0;
+  border-bottom: 1px solid #aaa;
+}
+
+div.tweet span.user {
+  color: #81aab4;
+}
+div.tweet span.user a {
+  color: #81aab4;
+  text-decoration: none;
+}
+
+div.tweet-disclaimer {
+    font-size: 10px;
+    font-style:italic;
+}
+
+/* */
+
+#login-form { width: 200px; }
+#login-form th { padding-right: 5px; }
+#login-form td { padding-bottom: 10px; }
+
+p.byline {
+	color: #a6a6a6;
+	font: italic 12px Georgia, "Times New Roman", Times, serif;
+	margin-bottom: 10px;
+	margin-top: -15px;
+}
+
+h1#content-title {
+	color: #015267;
+	margin-top: 20px;
+	font-size: 3em;
+}
+
+#content a {
+	color: #005f77;
+	font: italic normal 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	border-bottom: 1px dotted #005f77;
+	text-decoration: none;
+}
+
+#footer a {
+	color: #005f77;
+	font: italic normal 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	/* border-bottom: 1px dotted #005f77; */
+	text-decoration: none;
+}
+
+h3.title {
+    color: #015267;
+	margin-top: 25px;
+	font-size: 1.5em;
+}
+
+#content div.post_list div.post_teaser h3.title a {
+	text-decoration: none;
+	border-bottom-style: none;
+	font: italic normal 1.5em Georgia, "Times New Roman", Times, serif;
+	color: #002832;
+}
+
+span.author {
+	color: #002832;
+	font: normal normal 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+div.post_teaser {
+	border-bottom: 1px dotted #005f77;
+	margin-bottom: 10px;
+}
+
+p.tease {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 1em;
+	color: #2f2f2f;
+}

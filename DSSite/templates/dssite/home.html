@@ -1,0 +1,74 @@
+{% extends 'dssite/site_base.html' %}
+{% load handytags %}
+{% block title %}Django Seattle Home Page{%endblock%}
+{% block content %}
+  <div id="welcome">
+    <h1 class="content-title">Welcome to Django Seattle</h1>
+    <ul>
+      <li><a href="/about/contact/">Contact Us</a> on our email list, LinkedIn group, or IRC</li>
+      <li>Visit us on the <a href="http://www.seattletechcalendar.com/" target="_blank">Seattle Tech Calendar</a>. We generally meet on the second Tuesday of each month.</li>
+      <li><a href="http://www.djangoproject.com/" target="_blank">What is Django?</a></li>
+    </ul>
+  </div>
+<h1 class="content-title">Recent Blog Posts</h1>
+  <div class="post_list">
+    {% for post in blog_entries %}
+    <div class="post_teaser">
+      <h3 class="title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+      <p class="byline">Written by <span class="author">{{ post.author }}</span> on <span class="date">{{ post.publish|date:"F d, Y" }}</span></p>
+      <p class="tease">{{ post.tease }}</p>
+      <p class="read-more">{ <a href="{{ post.get_absolute_url }}">read more ...</a> }</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if is_paginated %}
+  <p class="pagination">
+    {% if has_next %}
+    <a class="older" href="?page={{ next }}">Older</a>
+    {% endif %}
+    {% if has_next and has_previous %} | {% endif %}
+    {% if has_previous %}
+    <a class="newer" href="?page={{ previous }}">Newer</a>
+    {% endif %}
+  </p>
+  {% endif %}
+
+{% endblock %}
+
+{% block sidebar %}
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'djangoseattle',
+  interval: 6000,
+  title: 'Django Seattle',
+  subject: 'Recent Tweets tagged with #djangoseattle',
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'all'
+  }
+}).render().start();
+</script>
+{% endblock %}

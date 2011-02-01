@@ -1,0 +1,10 @@
+{% for entry in fields %}{% with entry.field as field %}
+<div class="field {{entry.classes}}" id="{{entry.name}}_field">{% if field.is_hidden %}{{ field }}{% else %}
+	<span class="field_label">{{ field.label_tag }}:</span>
+	<span class="field_actual">{{ field }}{% if entry.required %}<span class="req">*</span>{%endif%}{% if field.errors %}<div class="field_errors">
+	{% for error in field.errors %}<div class="field_error">{{error}}</div>{% endfor %}
+	</div>{% endif %}
+	</span>
+	{% if field.help_text %}<div class="field_help_text">{{ field.help_text }}</div>
+{% endif %}{% endif %}</div>
+{% endwith %}{% endfor %}

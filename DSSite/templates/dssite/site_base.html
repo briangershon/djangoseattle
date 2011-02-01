@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Django Seattle - {% block title %}{% endblock %}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/DSSite.css" type="text/css" media="screen, projection"> 
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/print.css" type="text/css" media="print"> 
+	<!--[if IE]>
+  		<link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/ie.css" type="text/css" media="screen, projection">
+	<![endif]-->
+
+	<script src="{{MEDIA_URL}}js/lib/jquery.js"></script>
+	<script src="{{MEDIA_URL}}js/lib/jquery.form.js"></script>
+
+	{% block extra_head %}{% endblock %}
+</head>
+<body>
+	<div id="container" class="container">
+
+		<div id="header" class="span-24 last">
+			<div id="logo">
+				<a href="/"><img src="{{MEDIA_URL}}img/djangoseattle-logo.jpg" alt="Django Seattle User Group"/></a>
+			</div>
+			
+		{% load navbartags %}
+		{% print_navbar %}
+		</div>
+
+		<div id="content" class="span-18">
+			{% block content %}{%endblock%}
+		</div>
+		<div id="sidebar" class="span-6 last">
+			{% block sidebar %}
+      {% endblock %}
+		</div>
+
+		<div id="footer" class="span-24 last">
+		  <hr/>
+			&copy; Django Seattle User Group. Hosted by <a href="http://www.linkedin.com/in/briangershon" target="_blank">Brian Gershon</a> at <a href="http://www.webfaction.com/" target="_blank">WebFaction</a>.
+			<div><a href="http://www.djangoproject.com/" target="_blank"><img src="http://media.djangoproject.com/img/badges/djangomade124x25_grey.gif" border="0" alt="Made with Django." title="Made with Django." /></a></div>
+		</div>
+	</div>
+</body>
+</html>

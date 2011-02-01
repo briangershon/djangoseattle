@@ -1,0 +1,60 @@
+[
+    {
+        "pk": 1, 
+        "model": "sites.site", 
+        "fields": {
+            "domain": "localhost", 
+            "name": "Local Host"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false, 
+            "title": "Contact Us", 
+            "url": "/about/contact/", 
+            "template_name": "", 
+            "sites": [
+                1, 
+                2
+            ], 
+            "content": "Contact Us information.", 
+            "enable_comments": false
+        }
+    },
+    {
+        "pk": 2, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false, 
+            "title": "Home", 
+            "url": "/", 
+            "template_name": "", 
+            "sites": [
+                1,
+                2
+            ], 
+            "content": "Welcome to Django Seattle!", 
+            "enable_comments": false
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "dssite.menuitem", 
+        "fields": {
+            "url": "/about/", 
+            "placement": 1, 
+            "title": "About"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "dssite.menuitem", 
+        "fields": {
+            "url": "/about/contact/", 
+            "placement": 5, 
+            "title": "Contact Us"
+        }
+    }
+]

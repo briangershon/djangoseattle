@@ -1,0 +1,8 @@
+    <h2 id="twitter-header">What people are saying:</h2>
+{% for tweet in tweets %}
+    <div class="tweet">
+        <span class="user"> <a href="http://www.twitter.com/{{ tweet.user }}" target="_blank">{{ tweet.user }}</a></span> - 
+        <span class="text"> {{ tweet.text }}</span>
+    </div>
+{% endfor %}
+<br/><div class="tweet-disclaimer">Tweets with the #djangoseattle tag appear here.</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<div id="container" class="container">
+
+		<div id="header" class="span-24 last">
+			<div id="logo">
+				<a href="/"><img src="{{MEDIA_URL}}img/djangoseattle-logo.jpg" alt="Seattle Django User Group"/></a>
+			</div>
+			<ul class="navBar">
+				{% for menu_item in menu_items %}
+				<li class="menuItem"><a href="{{ menu_item.url }}">{{ menu_item.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div id="content" class="span-18">
+			{% block content %}{%endblock%}
+		</div>
+
+		<div id="footer" class="span-24 last">
+			&copy; Django Seattle User Group
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "dssite/site_base.html" %}
+
+{% block content%}
+<h1>Login:</h1>
+
+{% if form.errors %}
+<p>Your username and password didn't match.</p>
+{% endif %}
+
+<form id="login-form" method="post" action=".">
+<table>
+<tr><th>{{ form.username.label_tag }}:</th><td>{{ form.username }}</td></tr>
+<tr><th>{{ form.password.label_tag }}:</th><td>{{ form.password }}</td></tr>
+<tr><td colspan="2" style="text-align: right;">
+	<input type="submit" value="login" />
+	<input type="hidden" name="next" value="{{ next }}" />
+</td></tr>
+</table>
+</form>
+
+{% endblock %}

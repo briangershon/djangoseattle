@@ -1,0 +1,32 @@
+{% extends "dssite/site_base.html" %}
+
+
+{% block title %}{{ object.title }}{% endblock %}
+{% block body_class %}{{ block.super }} post_detail{% endblock %}
+{% block body_id %}post_{{ object.id }}{% endblock %}
+
+
+{% block content_title %}
+  
+{% endblock %}
+
+
+{% block content %}
+  {% load blog markup comments tagging_tags %}
+  <h1 id="content-title">{{ object.title }}</h1>
+  <div class="post_list">
+  <div class="post_teaser">
+      <p class="byline">Written by <span class="author">{{ object.author }}</span> on <span class="date">{{ object.publish|date:"F d, Y" }}</span></p>
+      <p class="tease">{{ object.tease|markdown }}</p>
+      <p class="body-text">{{ object.body|markdown }}
+    </div>
+  
+  {% tags_for_object object as tag_list %}
+  {% if tag_list %}
+  <p class="inline_tag_list"><strong>Related tags:</strong>
+    {% for tag in tag_list %}
+    {{ tag }}{% if not forloop.last %}, {% endif %}
+    {% endfor %}
+  </p>
+  {% endif %}
+{% endblock %}
