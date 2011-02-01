@@ -1,7 +1,7 @@
 DjangoSeattle.org Website
 =========================
 
-This is the code for (http://www.djangoseattle.org)[http://www.djangoseattle.org]
+This is the code for [http://www.djangoseattle.org](http://www.djangoseattle.org)
 
 History
 -------
