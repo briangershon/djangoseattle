@@ -5,7 +5,7 @@ This is the code for [http://www.djangoseattle.org](http://www.djangoseattle.org
 
 Setup
 -----
-See [SETUP.md](SETUP.md) for setup instructions.
+See SETUP.md for setup instructions.
 
 History
 -------
