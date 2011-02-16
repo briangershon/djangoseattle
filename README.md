@@ -3,6 +3,10 @@ DjangoSeattle.org Website
 
 This is the code for [http://www.djangoseattle.org](http://www.djangoseattle.org)
 
+Setup
+-----
+See [SETUP.md](SETUP.md) for setup instructions.
+
 History
 -------
 The Django Seatte site was created on July 25th, 2009. It was developed by 14 people who were building the site and experimenting at the same time, so it's a bit of a hodgepodge of developer programming styles and modules. [Django Seattle’s Website Barn Raising Sprint: A Recap](http://www.evolvingbits.com/2009/07/27/django-seattles-website-barn-raising-sprint-a-recap/)
