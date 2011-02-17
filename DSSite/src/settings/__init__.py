@@ -52,12 +52,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.flatpages',
-	'django.contrib.markup',
-	'django.contrib.comments',
-	'tagging',
+	  'django.contrib.markup',
+	  'django.contrib.comments',
+	  'tagging',
     'dssite',
-	'basic.*',
-    'twitsearch',
+	  'basic.*',
 )
 
 SITE_ID = 1
